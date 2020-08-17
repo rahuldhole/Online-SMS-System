@@ -1,0 +1,11 @@
+<?php
+session_start();
+if($_SESSION["update"])
+unset($_SESSION["update"]);
+if($_SESSION["sms"])
+unset($_SESSION["sms"]);
+unset($_SESSION["user"]);
+unset($_SESSION["pass"]);
+unset($_SESSION["auth"]);
+header("Location:../index.php");
+?>
